@@ -1,4 +1,5 @@
-package mechanisms;
+package org.firstinspires.ftc.teamcode.mechanisms;
+
 import static android.os.SystemClock.sleep;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -190,85 +191,6 @@ public class LinearSlide {
         return slideMotor;
     }
 
-    /**
-     * Convenience method to get a slide action that moves the slide to the specified level
-     * @param slideOption the slideoption to add
-     * @return the slide action
-     */
-    public SlideAction getLevelAction(SlideAction.SlideOption slideOption) {
-        return new SlideAction(slideOption, this);
-    }
 
-
-    /**
-     * Class for linear slide actions
-     */
-    public static class SlideAction extends AutoQueue.AutoAction {
-
-        private SlideOption slideOption;
-        private LinearSlide linearSlide;
-
-        /**
-         * Create a slide action to be executed autonomously
-         * @param slideOption the slide option to go to
-         * @param linearSlide the linear slide to use
-         */
-        public SlideAction(SlideOption slideOption, LinearSlide linearSlide) {
-            this.slideOption = slideOption;
-            this.linearSlide = linearSlide;
-        }
-
-        /**
-         * Begin the autonomous action
-         */
-        @Override
-        public void beginAutoAction() {
-            switch (slideOption) {
-                case LEVEL_0:
-                    linearSlide.level0();
-                    break;
-                case LEVEL_1:
-                    linearSlide.level1();
-                    break;
-                case LEVEL_2:
-                    linearSlide.level2();
-                    break;
-                case LEVEL_3:
-                    linearSlide.level3();
-                    break;
-                case CAP:
-                    linearSlide.levelCap();
-                    break;
-            }
-        }
-
-        /**
-         * Update the action. This needs to be called each loop
-         * @return true if the action has finished, otherwise false
-         */
-        @Override
-        public boolean updateAutoAction() {
-            boolean finished = false;
-            switch (slideOption) {
-                case LEVEL_0:
-                case LEVEL_1:
-                case LEVEL_2:
-                case LEVEL_3:
-                case CAP:
-                    finished = !linearSlide.getSlideMotor().isBusy();
-                    break;
-            }
-            return finished;
-        }
-
-
-        public enum SlideOption {
-            LEVEL_0,
-            LEVEL_1,
-            LEVEL_2,
-            LEVEL_3,
-            CAP
-        }
-    }
 
 }

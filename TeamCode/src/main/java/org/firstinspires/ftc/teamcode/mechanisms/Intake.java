@@ -1,4 +1,5 @@
-package mechanisms;
+package org.firstinspires.ftc.teamcode.mechanisms;
+
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
@@ -13,14 +14,14 @@ public class Intake {
 	}
 
 	public void intakeIn() { // intake
-		intakeMotor.setPower(-power);
+
 	}
 	
 	public void intakeOut() { // Reverse Intake
-		intakeMotor.setPower(power);
+
 	}
 	
 	public void stop() {
-		intakeMotor.setPower(0);
+
 	}
 }

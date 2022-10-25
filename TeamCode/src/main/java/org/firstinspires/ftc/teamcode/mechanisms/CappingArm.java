@@ -1,4 +1,4 @@
-package mechanisms;
+package org.firstinspires.ftc.teamcode.mechanisms;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -17,29 +17,23 @@ public class CappingArm {
     }
 
     public void turnOutwards() {
-        if (armServo.getPosition() < 1) {
-            armServo.setPosition(armServo.getPosition() + .05);
-        } else {
-            armServo.setPosition(1);
-        }
+
     }
     public void turnInwards() {
-        if (armServo.getPosition() > 0) {
-            armServo.setPosition(armServo.getPosition() - .05);
-        } else {
-            armServo.setPosition(0);
-        }
+
     }
 
     public void spinOut() {
-        armServo.setPosition(0);
+
     }
 
     public void spinIn() {
-        armServo.setPosition(1);
+
     }
 
-    public void defaultPosition() {armServo.setPosition(0.7);}
+    public void defaultPosition() {
+
+    }
 
     public double getServoPos() {
         return armServo.getPosition();

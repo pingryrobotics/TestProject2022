@@ -1,4 +1,4 @@
-package mechanisms;
+package org.firstinspires.ftc.teamcode.mechanisms;
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -18,7 +18,7 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
  * 3. polar move
  *
  */
-public class DriveControl implements QueueableMechanism {
+public class DriveControl {
 
     public static final int GYRO_MIN_ANGLE = -180;
     public static final int GYRO_MAX_ANGLE = 180;
@@ -468,7 +468,7 @@ public class DriveControl implements QueueableMechanism {
     /**
      * A class to represent auto drive actions to queue for execution
      */
-    public static class DriveAction extends AutoQueue.AutoAction {
+    public static class DriveAction {
         private final double percentSpeed;
         private final double targetIncrement;
         private final DriveOption driveOption;

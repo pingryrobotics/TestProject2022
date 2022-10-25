@@ -1,14 +1,16 @@
-package opmodes_teleop;
+package org.firstinspires.ftc.teamcode.opmodes_teleop;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 
-import mechanisms.Carousel;
-import mechanisms.DriveControl;
-import mechanisms.Intake;
-import mechanisms.LinearSlide;
+
+import org.firstinspires.ftc.teamcode.mechanisms.Carousel;
+import org.firstinspires.ftc.teamcode.mechanisms.DriveControl;
+import org.firstinspires.ftc.teamcode.mechanisms.Intake;
+import org.firstinspires.ftc.teamcode.mechanisms.LinearSlide;
+
 import teamcode.GamepadController;
 import teamcode.GamepadController.ButtonState;
 import teamcode.GamepadController.ToggleButton;
@@ -161,18 +163,6 @@ public class DriveControlOpMode extends OpMode {
 		// dpad right: linearslide goes to first level
 		if (mechanismController.getButtonState(ToggleButton.DPAD_RIGHT) == ButtonState.KEY_DOWN) {
 			linearSlide.setPosition(servoPos);
-		}
-
-		// dpad left: linearslide goes to second level
-		if (movementController.getButtonState(ToggleButton.DPAD_LEFT) == ButtonState.KEY_DOWN) {
-			linearSlide.level3();
-		}
-
-		if (movementController.getButtonState(ToggleButton.DPAD_UP) == ButtonState.KEY_DOWN) {
-			linearSlide.level2();
-		}
-		if (movementController.getButtonState(ToggleButton.DPAD_RIGHT) == ButtonState.KEY_DOWN) {
-			linearSlide.level1();
 		}
 
 
