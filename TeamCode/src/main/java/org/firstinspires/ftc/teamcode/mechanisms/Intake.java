@@ -14,14 +14,14 @@ public class Intake {
 	}
 
 	public void intakeIn() { // intake
-
+		intakeMotor.setPower(-power);
 	}
 	
 	public void intakeOut() { // Reverse Intake
-
+		intakeMotor.setPower(power);
 	}
 	
 	public void stop() {
-
+		intakeMotor.setPower(0);
 	}
 }

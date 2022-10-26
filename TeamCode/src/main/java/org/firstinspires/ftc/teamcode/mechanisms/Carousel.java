@@ -14,7 +14,7 @@ public class Carousel {
 	}
 
 	public void spin() { // spin at speed designated by "power"
-
+		carouselMotor.setPower(power);
 	}
 
 	public void spinPower(double power){
@@ -26,11 +26,11 @@ public class Carousel {
 	}
 
 	public void reverseSpin() {
-
+		carouselMotor.setPower(-power);
 	}
 
 	public void stop() {
-
+		carouselMotor.setPower(0);
 	}
 }
 
