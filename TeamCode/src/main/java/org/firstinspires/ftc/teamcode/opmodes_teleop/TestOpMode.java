@@ -114,6 +114,12 @@ public class TestOpMode extends OpMode {
             intake.stop();
         }
 
+        if (movementController.getButtonState(ToggleButton.A) == ButtonState.KEY_DOWN) {
+            carousel.spin(1);
+        } else if (movementController.getButtonState(ToggleButton.A) == ButtonState.KEY_UP) {
+            carousel.stop();
+        }
+
     }
 
 

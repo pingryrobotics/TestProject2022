@@ -13,8 +13,8 @@ public class Carousel {
 		power = 0.325; // 1150 rpm
 	}
 
-	public void spin() { // spin at speed designated by "power"
-
+	public void spin(double direction) { // spin at speed designated by "power"
+		carouselMotor.setPower(direction);
 	}
 
 	public void spinPower(double power){
