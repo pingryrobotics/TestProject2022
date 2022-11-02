@@ -17,26 +17,31 @@ public class CappingArm {
     }
 
     public void turnOutwards() {
+        armServo.setPosition(armServo.getPosition()+.1);
 
     }
     public void turnInwards() {
+        //precise/increments
+        armServo.setPosition(armServo.getPosition()+.1);
 
     }
 
     public void spinOut() {
+        //woo woo like very agrressive
+        armServo.setPosition(1);
 
     }
 
     public void spinIn() {
-
+        armServo.setPosition(0);
     }
 
     public void defaultPosition() {
+        armServo.setPosition(0.5);
 
     }
 
     public double getServoPos() {
         return armServo.getPosition();
     }
-
 }

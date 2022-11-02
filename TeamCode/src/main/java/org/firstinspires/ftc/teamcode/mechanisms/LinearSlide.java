@@ -85,7 +85,6 @@ public class LinearSlide {
     }
 
 
-
     public void holdSlidePosition() {
         slideMotor.setTargetPosition(slideMotor.getCurrentPosition());
         slideMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
@@ -97,7 +96,7 @@ public class LinearSlide {
      * Bring the slide to the lowest possible position, set the encoders to 0, and hold at that position.
      * WARNING: THIS METHOD BRINGS THE SLIDE ALL THE WAY DOWN. This SHOULD be limited by the bar
      * below the bucket, but if this isn't there, this will DESTROY THE SLIDE.
-     *
+     * <p>
      * Also, this method likely takes a few seconds to run.
      */
     public void calibrateSlide() {

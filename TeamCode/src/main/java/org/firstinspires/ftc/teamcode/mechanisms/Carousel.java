@@ -18,11 +18,11 @@ public class Carousel {
 	}
 
 	public void spinPower(double power){
-
+		carouselMotor.setPower(power);
 	}
 	
 	public void spinAngle(int angle) { // in radians
-
+		//i actually hate radians and will not be doing this function
 	}
 
 	public void reverseSpin() {
